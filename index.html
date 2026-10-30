@@ -83,29 +83,93 @@ th{background:var(--side);color:var(--mut);text-align:left;padding:11px 16px}td{
 .toast{position:fixed;right:20px;bottom:calc(54px + env(safe-area-inset-bottom,0px));background:#fff;color:#000;border-radius:14px;padding:12px 18px;font-weight:800;opacity:0;transform:translateY(14px) scale(.95);transition:.4s var(--e);pointer-events:none;box-shadow:0 10px 40px rgba(255,255,255,.2)}.toast{color:#000}.toast.on{opacity:1;transform:none}
 @media(min-width:900px){body{padding:14px}}
 @media(max-width:760px){.app{border-radius:0;border:0}.body{flex-direction:column}.side{width:100%;flex-direction:row;overflow-x:auto;padding:8px;border-right:0;border-bottom:1px solid var(--brd)}.nav{width:auto;white-space:nowrap;padding:11px 14px}.ind::before{display:none}.conn{display:none}.main{padding:16px}.grid,.g3,.g2{grid-template-columns:1fr}.chips,.badge{display:none}.wb:first-of-type{margin-left:auto}input[type=text]{width:100%}input[type=text]:focus{width:100%}}
+
+[hidden]{display:none!important}button *{color:inherit}.ic svg,.logo svg{color:inherit}.app{position:relative}.card{border-radius:var(--r,16px)}
+.wel{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:10px}.wel small{letter-spacing:3px;font-weight:700}
+.plan{border:1px solid var(--brd);background:var(--surf);border-radius:22px;padding:7px 14px;font-weight:700;white-space:nowrap}
+.hm,.hm2{display:grid;grid-template-columns:2fr 1fr;gap:16px}.hm2{margin-top:16px}
+.lc{overflow:visible;z-index:5;padding:30px;min-height:290px;background:linear-gradient(135deg,#111118,#09090c)}.lc .gb{border-radius:var(--r,16px)}.lc-in{position:relative}
+.lt{font-size:40px;font-weight:900;line-height:1.1;margin:10px 0 20px}.lt span{font-size:14px;font-weight:600}
+.lc .launch{margin:0 0 18px;width:min(340px,100%);height:72px;font-size:20px;border-radius:20px}
+.lrow{display:flex;gap:8px;flex-wrap:wrap}.lrow .dd{margin:0;min-width:220px}
+.acct{display:flex;flex-direction:column;gap:4px}.av{width:60px;height:60px;border-radius:20px;background:linear-gradient(135deg,#fff,#8a8a93);color:#000;display:grid;place-items:center;font-size:26px;font-weight:900;margin-bottom:8px;box-shadow:0 0 24px rgba(255,255,255,.2)}
+.kv{display:grid;grid-template-columns:1fr auto;gap:8px 12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--brd)}.kv span{color:var(--mut)}.kv b{text-align:right}
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:10px}.qb{background:var(--hov);border:1px solid var(--brd);border-radius:14px;padding:18px 8px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:8px}
+.qb:hover{background:#fff;color:#000;transform:translateY(-3px)}.qb:active{transform:scale(.95)}.qi{display:block}.qb svg{width:22px;height:22px}
+.sg{overflow:visible;margin-bottom:14px}.sg:has(.dd.open){z-index:10}.srow{display:flex;align-items:center;gap:14px;padding:13px 0;border-top:1px solid var(--brd)}.srow>div:first-child{flex:1}.srow b{display:block;margin-bottom:2px}.sg h4+.srow,.sg h4+.sl{border-top:0}
+.srow input[type=text]{width:220px}.srow input[type=text]:focus{width:250px}.sg .sl{padding:6px 0 14px}
+#login{position:absolute;inset:0;z-index:100;display:grid;place-items:center;padding:20px;overflow:auto;background:radial-gradient(600px 400px at 50% 0,#1d1d26,transparent 70%),#07070A;transition:opacity .6s var(--e),transform .6s var(--e),visibility .6s}
+#login.out{opacity:0;transform:scale(1.05);visibility:hidden;pointer-events:none}
+.lbox{position:relative;width:min(400px,100%);padding:28px;animation:up .7s var(--e)}.lbox:hover{transform:none}.lbox.shake{animation:shake .4s}
+@keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.lbox label{color:var(--mut);font-weight:700;font-size:11px;letter-spacing:1px}
+.lbox input{width:100%;background:var(--surf);border:1px solid var(--brd);border-radius:12px;padding:12px 14px;outline:0;margin:6px 0 14px;transition:.3s}.lbox input:focus{width:100%;border-color:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.08)}
+.tabs2{display:flex;gap:8px;justify-content:center;margin-bottom:18px}.pw{position:relative}.pw button{position:absolute;right:6px;top:10px;width:34px;height:34px;color:var(--mut)}.pw button:hover{color:#fff}.pw svg{width:18px;height:18px}
+.srow2{display:flex;justify-content:space-between;align-items:center;margin:2px 0 12px;color:var(--mut);font-weight:600}.err{min-height:18px;color:#d4d4d8;font-weight:600;margin-bottom:10px}
+.guest{width:100%;margin-top:10px;color:var(--mut);font-weight:600;padding:8px}.guest:hover{color:#fff}.hint{text-align:center;margin-top:6px;font-size:11px}
+.lprog{height:3px;background:var(--brd);border-radius:2px;margin-top:14px;overflow:hidden;opacity:0;transition:.3s}.lprog i{display:block;height:100%;width:0;background:#fff;transition:width 1.6s var(--e)}.busyl .lprog{opacity:1}.busyl .lprog i{width:100%}
+body.noanim *{animation:none!important;transition:none!important}body.nofx *{box-shadow:none!important;filter:none!important;text-shadow:none!important}
+@media(max-width:760px){.hm,.hm2{grid-template-columns:1fr}.lc{padding:20px}.lt{font-size:30px}.plan{display:none}.lrow .dd{min-width:100%}.srow{flex-wrap:wrap}.srow input[type=text],.srow input[type=text]:focus{width:100%}}
+
+.app{backdrop-filter:none;background:linear-gradient(180deg,#0a0a0e,#08080b)}.dd-m{backdrop-filter:none}#login.out .gb::before{animation:none}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+.dcbtn,.dcwide,.dcpill{display:flex;align-items:center;justify-content:center;gap:8px;background:#fff;color:#000;font-weight:800}
+.dcbtn{margin-top:auto;padding:12px;border-radius:12px}.dcbtn+.conn{margin-top:8px}.dcbtn:hover,.dcwide:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(255,255,255,.22)}
+.dcwide{width:100%;margin-top:10px;padding:13px;border-radius:14px}.dcpill{margin-left:auto;border-radius:20px;padding:6px 14px;white-space:nowrap}.dcpill:hover{transform:scale(1.05)}.tb .chips{margin-left:8px}
+.dcbtn svg,.dcwide svg,.dcpill svg{width:18px;height:18px}.dcbtn *,.dcwide *,.dcpill *{color:#000}
+#promo{position:absolute;inset:0;z-index:90;display:grid;place-items:center;padding:20px;background:rgba(3,3,5,.8);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}#promo.on{opacity:1;visibility:visible}
+.pbox{position:relative;width:min(660px,100%);background:var(--surf);border:1px solid #3a3a44;border-radius:26px;overflow:hidden;transform:translateY(26px) scale(.94);transition:transform .65s var(--e);box-shadow:0 30px 90px rgba(0,0,0,.7),0 0 70px rgba(255,255,255,.07)}#promo.on .pbox{transform:none}
+.pban{position:relative;height:220px;background:linear-gradient(135deg,#18181e,#0a0a0e);display:grid;place-items:center;overflow:hidden}
+.pic{position:relative;width:100px;height:100px;border-radius:30px;background:linear-gradient(135deg,#fff,#8a8a93);color:#000;display:grid;place-items:center;box-shadow:0 0 60px rgba(255,255,255,.3);animation:fl 3.5s ease-in-out infinite}.pic svg{width:52px;height:52px;color:#000}@keyframes fl{50%{transform:translateY(-8px) rotate(-3deg)}}
+.pbody{padding:24px 28px 26px}.ptag{display:inline-block;border:1px solid var(--brd);border-radius:20px;padding:3px 12px;font-size:11px;font-weight:800;letter-spacing:2px;color:var(--mut)}
+.pbody h3{font-size:27px;font-weight:900;margin:12px 0 8px}.pbody p{line-height:1.55;min-height:42px}.ptx{transition:opacity .25s,transform .25s}.ptx.out{opacity:0;transform:translateY(8px)}
+.pact{display:flex;gap:10px;margin-top:20px}.pact .cta{flex:1;display:flex;align-items:center;justify-content:center;gap:8px}.pact .cta *{color:#000}.pact svg{width:20px;height:20px}
+.pdots{display:flex;gap:6px;justify-content:center;margin-top:18px}.pdots i{width:7px;height:7px;border-radius:4px;background:var(--brd);transition:.4s var(--e);cursor:pointer}.pdots i.on{width:26px;background:#fff}
+.pclose{position:absolute;top:14px;right:14px;z-index:3;width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.6);border:1px solid var(--brd);font-weight:800}.pclose:disabled{opacity:.75;cursor:default}.pclose:not(:disabled):hover{background:#fff;color:#000;transform:rotate(90deg)}
+@media(max-width:760px){.dcbtn{display:none}.dcpill span{display:none}.dcpill{padding:8px 10px}.tb .wb:first-of-type{margin-left:0}.pban{height:150px}.pic{width:78px;height:78px;border-radius:24px}.pbody{padding:20px}.pbody h3{font-size:22px}.pact{flex-direction:column}}
 </style></head><body>
-<div class="app">
+<div class="app"><div id="login"><div class="gb"></div><div class="card lbox">
+<div class="logo" style="width:54px;height:54px;border-radius:16px;margin:0 auto 14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:30px;height:30px"><path d="M12 2.5l8.5 4.8v9.4L12 21.5l-8.5-4.8V7.3z"/><path d="M8.3 16L12 8l3.7 8M9.7 13.3h4.6"/></svg></div>
+<b class="brand" style="font-size:18px;letter-spacing:3px;display:block;text-align:center">ALUMINUM // CLIENT</b>
+<p class="mut" id="lsub" style="text-align:center;margin:6px 0 18px">Sign in to continue</p>
+<div class="tabs2"><button class="pill on" data-m="in">Sign in</button><button class="pill" data-m="up">Create account</button></div>
+<label>USERNAME</label><input type="text" id="lu" placeholder="Username" autocomplete="username">
+<div id="emailF" hidden><label>EMAIL</label><input type="text" id="le" placeholder="you@email.com"></div>
+<label>PASSWORD</label><div class="pw"><input type="password" id="lp" placeholder="Password"><button type="button" id="eye" data-i="eye"></button></div>
+<div id="cpF" hidden><label>CONFIRM PASSWORD</label><input type="password" id="lc" placeholder="Repeat password"></div>
+<div class="srow2"><span>Remember me</span><button class="sw" id="rem"></button></div>
+<div class="err" id="lerr"></div><button class="cta" id="lgo">SIGN IN</button><button class="guest" id="guest">Continue as guest</button>
+<p class="mut hint">Demo account: admin / aluminum</p><div class="lprog"><i></i></div></div></div>
 <div class="tb"><div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8.5 4.8v9.4L12 21.5l-8.5-4.8V7.3z"/><path d="M8.3 16L12 8l3.7 8M9.7 13.3h4.6"/></svg></div><b class="brand">ALUMINUM // CLIENT</b><span class="badge">v2.0 Stable</span>
-<div class="chips"><span class="chip">RAM <b id="ramT">46</b>%</span><span class="chip">PING <b id="pingT">32</b> ms</span><span class="chip"><b id="fpsT">240</b> FPS</span></div>
+<button class="dcpill" id="dc2"><i class="qi" data-i="dc"></i><span>Join Discord</span></button><div class="chips"><span class="chip">RAM <b id="ramT">46</b>%</span><span class="chip">PING <b id="pingT">32</b> ms</span><span class="chip"><b id="fpsT">240</b> FPS</span></div>
 <button class="wb">—</button><button class="wb">□</button><button class="wb x">✕</button></div>
 <div class="body">
 <div class="side" id="side"><div class="ind" id="ind"></div>
 <button class="nav on" data-t="home"><span class="ni" data-i="home"></span>HOME</button><button class="nav" data-t="mods"><span class="ni" data-i="mods"></span>MODS &amp; PACKS</button>
 <button class="nav" data-t="sd"><span class="ni" data-i="sd"></span>SD GRAPHICS</button><button class="nav" data-t="boost"><span class="ni" data-i="boost"></span>BOOST &amp; RAM</button>
-<button class="nav" data-t="ff"><span class="ni" data-i="ff"></span>FASTFLAGS</button>
-<div class="conn"><span class="dot"></span>Status: Connected to Roblox</div></div>
+<button class="nav" data-t="ff"><span class="ni" data-i="ff"></span>FASTFLAGS</button><button class="nav" data-t="set"><span class="ni" data-i="gear"></span>SETTINGS</button>
+<button class="dcbtn" id="dc1"><i class="qi" data-i="dc"></i>Join Discord</button><div class="conn"><span class="dot"></span>Status: Connected to Roblox</div></div>
 <div class="main">
 <section class="tab on" id="home">
-<div class="hero"><div class="gb"></div><small>READY TO PLAY</small><button class="launch" id="launch">LAUNCH ROBLOX</button>
-<div class="dd" id="mode"></div>
-<div class="dd" id="fpsSel"></div></div>
-<div class="g2"><div class="card"><h4>LIVE FPS · LAST 40 SEC</h4><div class="fl" style="margin-bottom:8px"><div class="big" id="fpsBig">240</div><span class="mut">avg <b id="fpsAvg">236</b> · 1% low <b id="fpsLow">198</b></span></div>
+<div class="wel"><div><small class="mut" id="gt">GOOD EVENING</small><h2 id="hi" style="margin:4px 0 0">Welcome back</h2></div><span class="plan"><span class="dot"></span>PRO · Lifetime</span></div>
+<div class="hm">
+<div class="card lc"><div class="gb"></div><div class="lc-in"><small class="mut" style="letter-spacing:4px;font-weight:700">READY TO PLAY</small>
+<div class="lt">Roblox<br><span class="mut">Aluminum optimized profile</span></div>
+<button class="launch" id="launch">LAUNCH ROBLOX</button>
+<div class="lrow"><div class="dd" id="mode"></div><div class="dd" id="fpsSel"></div></div></div></div>
+<div class="card acct"><div class="av" id="uAv">A</div><b id="uName" style="font-size:17px">Guest</b><span class="mut">Aluminum ID · #0001</span>
+<div class="fl" style="margin-top:16px"><svg class="ring" viewBox="0 0 100 100" style="transform:rotate(-90deg)"><circle class="t" cx="50" cy="50" r="40"/><circle class="v" id="modR" cx="50" cy="50" r="40" stroke-dasharray="251.3" stroke-dashoffset="251.3"/></svg><div><div class="big" id="modN">3</div><span class="mut">mods active</span></div></div>
+<div class="kv"><span>Playtime</span><b>128h</b><span>Sessions</span><b>342</b><span>Profile</span><b>Ultra Potato</b></div></div></div>
+<div class="hm2">
+<div class="card"><h4>LIVE FPS · LAST 40 SEC</h4><div class="fl" style="margin-bottom:8px"><div class="big" id="fpsBig">240</div><span class="mut">avg <b id="fpsAvg">236</b> · 1% low <b id="fpsLow">198</b></span></div>
 <svg viewBox="0 0 600 150" preserveAspectRatio="none" style="height:150px"><defs><linearGradient id="gf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><path id="fa" fill="url(#gf)"/><path id="fl" fill="none" stroke="#fff" stroke-width="2.2" vector-effect="non-scaling-stroke"/></svg></div>
-<div class="card"><h4>ACTIVE MODS</h4><div class="fl"><svg class="ring" viewBox="0 0 100 100" style="transform:rotate(-90deg)"><circle class="t" cx="50" cy="50" r="40"/><circle class="v" id="modR" cx="50" cy="50" r="40" stroke-dasharray="251.3" stroke-dashoffset="251.3"/></svg><div><div class="big" id="modN">3</div><span class="mut">of 9 enabled</span></div></div></div></div>
+<div class="card"><h4>QUICK ACTIONS</h4><div class="qa">
+<button class="qb" id="clean"><i class="qi" data-i="boost"></i>Clean RAM</button><button class="qb" id="rejoin"><i class="qi" data-i="refresh"></i>Rejoin</button>
+<button class="qb" id="qp"><i class="qi" data-i="trash"></i>Purge Cache</button><button class="qb" id="qs"><i class="qi" data-i="shield"></i>Safe Mode</button></div><button class="dcwide" id="dc3"><i class="qi" data-i="dc"></i>Join Discord · 12.4k online</button></div></div>
 <div class="g3">
-<div class="card"><h4>SYSTEM MEMORY</h4><div class="fl"><svg class="ring" viewBox="0 0 100 100" style="transform:rotate(-90deg)"><circle class="t" cx="50" cy="50" r="40"/><circle class="v" id="ramR" cx="50" cy="50" r="40" stroke-dasharray="251.3" stroke-dashoffset="251.3"/></svg><div><div class="big" id="ramF">54%</div><span class="mut">free</span></div></div><button class="btn" id="clean" style="margin-top:14px;width:100%">Clean RAM</button></div>
+<div class="card"><h4>SYSTEM MEMORY</h4><div class="fl"><svg class="ring" viewBox="0 0 100 100" style="transform:rotate(-90deg)"><circle class="t" cx="50" cy="50" r="40"/><circle class="v" id="ramR" cx="50" cy="50" r="40" stroke-dasharray="251.3" stroke-dashoffset="251.3"/></svg><div><div class="big" id="ramF">54%</div><span class="mut">free</span></div></div></div>
 <div class="card"><h4>NETWORK PING</h4><svg viewBox="0 0 240 70" preserveAspectRatio="none" style="height:70px" id="pb"></svg><div class="mut" style="margin-top:10px">Current: <b id="ping2">32</b> ms</div></div>
-<div class="card"><h4>CURRENT SERVER</h4><div class="big" style="font-size:22px">128.116.45.3</div><div class="mut" style="margin:6px 0 14px">Region: Singapore · Ping <b id="ping3">32</b> ms</div><button class="btn" id="rejoin" style="width:100%">Rejoin Server</button></div></div>
+<div class="card"><h4>CURRENT SERVER</h4><div class="big" style="font-size:22px">128.116.45.3</div><div class="mut" style="margin-top:6px">Singapore · Ping <b id="ping3">32</b> ms</div></div></div>
 </section>
 <section class="tab" id="mods"><h2>MODS &amp; PACKS</h2>
 <div class="row"><input type="text" id="q" placeholder="Search mods...">
@@ -130,8 +194,12 @@ th{background:var(--side);color:var(--mut);text-align:left;padding:11px 16px}td{
 <section class="tab" id="ff"><h2>FASTFLAGS EDITOR</h2>
 <div class="row"><input type="text" id="fq" placeholder="Search flags..."><span class="sp"></span><button class="btn">+ Add Flag</button><button class="btn">Import JSON</button><button class="btn">Export JSON</button><button class="btn">Reset to Safe Defaults</button></div>
 <div class="wrap"><table><thead><tr><th>Flag</th><th>Value</th></tr></thead><tbody id="ft"></tbody></table></div></section>
+<section class="tab" id="set"><h2>SETTINGS</h2><div class="card sg"><h4>ACCOUNT</h4><div class="srow"><div><b>Display name</b><span class="mut">Shown on Home</span></div><input type="text" id="sName"></div><div class="srow"><div><b>Client name</b><span class="mut">Rename the client title</span></div><input type="text" id="cName" value="ALUMINUM // CLIENT"></div><div class="srow"><div><b>Sign out</b><span class="mut">Return to the login screen</span></div><button class="btn" id="logout">Log out</button></div></div><div class="card sg"><h4>APPEARANCE</h4><div class="sl"><div class="h">Corner radius<span id="radV">16 px</span></div><input type="range" id="rad" min="4" max="28" value="16"></div><div class="srow"><div><b>Animations</b><span class="mut">Transitions and motion effects</span></div><button class="sw on" id="swAnim"></button></div><div class="srow"><div><b>Glow effects</b><span class="mut">Shadows and neon glow</span></div><button class="sw on" id="swGlow"></button></div></div><div class="card sg"><h4>GAME &amp; LAUNCH</h4><div class="srow"><div><b>Roblox path</b><span class="mut">Auto-detected install folder</span></div><input type="text" id="gp" value="%LOCALAPPDATA%\Roblox"></div><div class="srow"><div><b>Language</b><span class="mut">Client interface language</span></div><div class="dd" id="lang" style="margin:0"></div></div><div class="srow"><div><b>Launch on startup</b><span class="mut">Start Aluminum with Windows</span></div><button class="sw " id="s1"></button></div><div class="srow"><div><b>Close after launch</b><span class="mut">Exit client when Roblox opens</span></div><button class="sw " id="s2"></button></div><div class="srow"><div><b>Auto-update</b><span class="mut">Keep client and mods updated</span></div><button class="sw on" id="s3"></button></div></div><div class="card sg"><h4>DANGER ZONE</h4><div class="srow"><div><b>Reset all settings</b><span class="mut">Restore default client settings</span></div><button class="btn" id="rst">Reset</button></div></div></section>
 </div></div>
-<div class="foot" id="foot"><span id="stT">Ready</span><span class="pg"><i></i></span></div></div>
+<div id="promo"><div class="pbox"><button class="pclose" id="pcl" disabled></button>
+<div class="pban"><div class="gb"></div><div class="pic" id="pic"></div></div>
+<div class="pbody"><div id="ptx" class="ptx"><span class="ptag" id="ptag"></span><h3 id="ptit"></h3><p class="mut" id="pdesc"></p></div>
+<div class="pact"><button class="cta" id="pj"></button><button class="btn" id="plater">Maybe later</button></div><div class="pdots" id="pdots"></div></div></div></div><div class="foot" id="foot"><span id="stT">Ready</span><span class="pg"><i></i></span></div></div>
 <div class="toast" id="toast"></div>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -151,7 +219,7 @@ function pbars(){$("#pb").innerHTML=pingH.map((v,i)=>`<rect x="${i*15}" y="${70-
 function tick(){fps.push(target*(.9+Math.random()*.1));fps.shift();ramH.push(100-free+(Math.random()*3-1.5));ramH.shift();pingH.push(22+Math.random()*30);pingH.shift();
 const a=Math.round(fps.reduce((x,y)=>x+y)/40),cur=Math.round(fps[39]);$("#fpsBig").textContent=cur;$("#fpsT").textContent=cur;$("#fpsAvg").textContent=a;$("#fpsLow").textContent=Math.round(Math.min(...fps));
 chart("#fl","#fa",fps,600,150,target*1.1);chart("#rl","#ra",ramH,600,90,100);pbars();const p=Math.round(pingH[15]);$("#pingT").textContent=p;$("#ping2").textContent=p;$("#ping3").textContent=p;$("#ramT").textContent=100-free}
-setInterval(tick,1000);
+setInterval(()=>{if(!document.hidden)tick()},1000);
 const M=[["Low-Poly Textures","Flat SD texture pack for weak PCs","Textures SD","▦",1],["Potato Terrain","Ultra-flat terrain materials","Textures SD","▤",1],["Gray Sky Pack","Plain gray skybox, less GPU load","Textures SD","▨",0],["Flat Cursor","Monochrome cursor set","Textures SD","➤",0],["Clean UI Icons","Minimal mono icon set","Textures SD","◧",0],["Classic Death Sound","Original death sound","Sounds & Crosshair","♪",0],["Minimal Crosshair","Thin white crosshair overlay","Sounds & Crosshair","✛",1],["Silent Steps","Muted ambient & step sounds","Sounds & Crosshair","◌",0],["Hit Sound Pack","Sharp short hit sounds","Sounds & Crosshair","♫",0]];
 const I=d=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const IC={home:I('<path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/>'),mods:I('<path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/>'),sd:I('<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>'),boost:I('<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>'),ff:I('<path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>'),gear:I('<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9L7 7M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>'),
@@ -163,7 +231,7 @@ const c=document.createElement("div");c.className="card mod";c.style.setProperty
 c.innerHTML=`<div class="top"><div class="ic">${IC[m[3]]||m[3]}</div><div><b>${m[0]}</b><span class="mut">${m[1]}</span></div></div><div class="ft"><button class="btn">${IC.gear}OPTIONS</button><button class="tg ${m[4]?"on":""}">${m[4]?"ENABLED":"DISABLED"}</button></div>`;
 const t=c.querySelector(".tg");t.onclick=()=>{m[4]=m[4]?0:1;t.classList.toggle("on",!!m[4]);t.textContent=m[4]?"ENABLED":"DISABLED";const k=M.filter(x=>x[4]).length;$("#modN").textContent=k;toast(m[0]+(m[4]?" enabled":" disabled"),1)};
 c.querySelector(".btn").onclick=()=>toast("Opening options: "+m[0]);$("#grid").append(c)})}
-$("#q").oninput=draw;$$("[data-f]").forEach(b=>b.onclick=()=>{$$("[data-f]").forEach(x=>x.classList.remove("on"));b.classList.add("on");flt=b.dataset.f.replace("&amp;","&");draw()});draw();
+let qd;$("#q").oninput=()=>{clearTimeout(qd);qd=setTimeout(draw,120)};$$("[data-f]").forEach(b=>b.onclick=()=>{$$("[data-f]").forEach(x=>x.classList.remove("on"));b.classList.add("on");flt=b.dataset.f.replace("&amp;","&");draw()});draw();
 $("#imp").onclick=()=>toast("Importing mod...",1);$("#fold").onclick=()=>toast("Opening mods folder");
 const T=["Disable Shadows|Turn off all shadow rendering","Remove 3D Grass|Strip terrain grass strands","Remove Material Textures|Flat surface materials","Force Voxel Lighting|Lightest lighting technology","Gray Sky|Plain sky for extra FPS"];
 $("#tgs").innerHTML=T.map(t=>{const[a,b]=t.split("|");return`<div class="card set"><div><b>${a}</b><span class="mut">${b}</span></div><button class="sw on"></button></div>`}).join("");
@@ -189,4 +257,55 @@ $("#purge").onclick=()=>{toast("Purging cache & logs...",1);setTimeout(()=>{$("#
 const F=[["DFIntTaskSchedulerTargetFps","240"],["DFIntDebugFRMQualityLevelOverride","1"],["FIntDebugTextureManagerSkipMips","8"],["DFFlagTextureQualityOverrideEnabled","true"],["FIntRenderShadowIntensity","0"],["FIntFRMMaxGrassDistance","0"],["DFFlagDebugRenderForceTechnologyVoxel","true"],["FFlagDebugSkyGray","true"],["FFlagDebugDisableTelemetryV2Event","true"]];
 function ft(){const q=$("#fq").value.toLowerCase();$("#ft").innerHTML=F.filter(f=>f[0].toLowerCase().includes(q)).map(f=>`<tr><td>${f[0]}</td><td>${f[1]}</td></tr>`).join("")}$("#fq").oninput=ft;ft();
 $$("[data-i]").forEach(e=>e.innerHTML=IC[e.dataset.i]);stag($("#home"));tick();setTimeout(()=>{ind($(".nav.on"));rings()},150);addEventListener("resize",()=>ind($(".nav.on")));
+
+Object.assign(IC,{refresh:I('<path d="M21 12a9 9 0 11-3-6.7M21 4v5h-5"/>'),trash:I('<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>'),shield:I('<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>'),eye:I('<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>')});
+$$("[data-i]").forEach(e=>e.innerHTML=IC[e.dataset.i]||"");
+const S={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+const US=()=>{try{return JSON.parse(S.get("al_users")||"{}")}catch(e){return{}}};
+const hr=new Date().getHours();$("#gt").textContent=hr<12?"GOOD MORNING":hr<18?"GOOD AFTERNOON":"GOOD EVENING";
+function setUser(u){$("#uName").textContent=u;$("#uAv").textContent=u[0].toUpperCase();$("#hi").textContent="Welcome back, "+u;$("#sName").value=u}
+$("#qp").onclick=()=>$("#purge").click();$("#qs").onclick=()=>{setMode(3,1);toast("Safe mode: default flags applied",1)};
+let lm="in";
+$$("[data-m]").forEach(b=>b.onclick=()=>{lm=b.dataset.m;$$("[data-m]").forEach(x=>x.classList.toggle("on",x==b));$("#emailF").hidden=$("#cpF").hidden=lm=="in";$("#lgo").textContent=lm=="in"?"SIGN IN":"CREATE ACCOUNT";$("#lsub").textContent=lm=="in"?"Sign in to continue":"Create your Aluminum ID";$("#lerr").textContent=""});
+$("#eye").onclick=()=>{const p=$("#lp");p.type=p.type=="password"?"text":"password"};
+$("#rem").onclick=e=>{e.stopPropagation();e.currentTarget.classList.toggle("on")};
+function fail(m){$("#lerr").textContent=m;const b=$(".lbox");b.classList.remove("shake");void b.offsetWidth;b.classList.add("shake")}
+function go(u,rem){$("#lerr").textContent="";const l=$("#login");l.classList.add("busyl");
+["Authenticating...","Syncing config...","Loading mods..."].forEach((t,i)=>setTimeout(()=>$("#lgo").textContent=t.toUpperCase(),i*520));
+setTimeout(()=>{l.classList.add("out");l.classList.remove("busyl");setUser(u);S.set("al_session",rem?u:"");toast("Welcome, "+u);rings();setTimeout(showPromo,800)},1700)}
+$("#lgo").onclick=()=>{const u=$("#lu").value.trim(),k=u.toLowerCase(),p=$("#lp").value,us=US();
+if(u.length<3)return fail("Username must be at least 3 characters");if(p.length<6)return fail("Password must be at least 6 characters");
+if(lm=="up"){if(!/^\S+@\S+\.\S+$/.test($("#le").value))return fail("Enter a valid email");if(p!=$("#lc").value)return fail("Passwords do not match");if(us[k]||k=="admin")return fail("Username already taken");us[k]=p;S.set("al_users",JSON.stringify(us))}
+else if(!((k=="admin"&&p=="aluminum")||us[k]===p))return fail("Wrong username or password");
+go(u,$("#rem").classList.contains("on"))};
+$("#guest").onclick=()=>go("Guest",false);$("#login").addEventListener("keydown",e=>e.key=="Enter"&&$("#lgo").click());
+$("#logout").onclick=()=>{S.set("al_session","");$("#lp").value="";$("#lgo").textContent=lm=="in"?"SIGN IN":"CREATE ACCOUNT";$("#login").classList.remove("out")};
+const ss=S.get("al_session");if(ss){setUser(ss);$("#login").classList.add("out");setTimeout(showPromo,900)}else setUser("Guest");
+$("#sName").oninput=e=>e.target.value.trim()&&setUser(e.target.value.trim());
+$("#cName").oninput=e=>$(".brand").textContent=e.target.value.toUpperCase()||"ALUMINUM // CLIENT";
+$("#rad").oninput=e=>{pr(e.target);document.documentElement.style.setProperty("--r",e.target.value+"px");$("#radV").textContent=e.target.value+" px"};pr($("#rad"));
+document.addEventListener("click",e=>{const s=e.target.closest(".sw");if(!s)return;if(s.id=="swAnim")document.body.classList.toggle("noanim",!s.classList.contains("on"));if(s.id=="swGlow")document.body.classList.toggle("nofx",!s.classList.contains("on"))});
+dd($("#lang"),[["English",0],["Tiếng Việt",1]],1,(k,v)=>toast("Language: "+["English","Tiếng Việt"][k],1));
+$("#rst").onclick=()=>{$("#rad").value=16;$("#rad").dispatchEvent(new Event("input"));["swAnim","swGlow"].forEach(i=>{$("#"+i).classList.add("on")});document.body.classList.remove("noanim","nofx");$("#cName").value="ALUMINUM // CLIENT";$("#cName").dispatchEvent(new Event("input"));toast("Settings reset",1)};
+
+IC.dc=I('<path fill="currentColor" stroke="none" d="M20.3 4.4A19.8 19.8 0 0015.4 3l-.3.6a18 18 0 013.500 1.800 14 14 0 00-13.200 0A18 18 0 018.900 3.600L8.600 3a19.800 19.800 0 00-4.900 1.400C.6 9 -.2 13.400.2 17.700a20 20 0 006 3l1.300-2.100c-.7-.3-1.300-.6-1.900-1l.5-.4a14.200 14.200 0 0012.200 0l.5.400c-.6.400-1.300.700-1.900 1l1.300 2.100a20 20 0 006-3c.5-5-.8-9.300-3.100-13.300zM8.500 15c-1.100 0-2-1-2-2.200s.9-2.200 2-2.200 2 1 2 2.200-.9 2.200-2 2.200zm7 0c-1.100 0-2-1-2-2.200s.9-2.200 2-2.200 2 1 2 2.200-.9 2.200-2 2.200z"/>');
+$$("[data-i]").forEach(e=>e.innerHTML=IC[e.dataset.i]||"");
+const DC="https://discord.gg/aluminum";
+const joinDC=()=>{toast("Opening Discord...",1);window.open(DC,"_blank","noopener")};
+["#dc1","#dc2","#dc3"].forEach(s=>$(s).onclick=joinDC);
+const PS=[{tag:"COMMUNITY",ic:"dc",t:"Join the Aluminum Discord",d:"Free mod drops, giveaways, support and early access builds. 12,480 members online right now.",cta:"JOIN DISCORD",act:"dc"},
+{tag:"UPDATE v2.0",ic:"boost",t:"Season 2 update is live",d:"New Ultra Potato SD engine: up to +100% FPS on low-end PCs, plus a fully redesigned launcher.",cta:"SEE UPDATE",act:"n"},
+{tag:"ALUMINUM PRO",ic:"shield",t:"Unlock Aluminum Pro",d:"Exclusive texture packs, cloud config sync and priority support. 30% off this week only.",cta:"GET PRO",act:"n"}];
+let pi=0,pt,pc;
+$("#pdots").innerHTML=PS.map((_,i)=>`<i data-k="${i}"></i>`).join("");
+$$("#pdots i").forEach(d=>d.onclick=()=>{pslide(+d.dataset.k);clearInterval(pt);pt=setInterval(()=>pslide((pi+1)%PS.length),4500)});
+function pslide(i){pi=i;const s=PS[i],t=$("#ptx");t.classList.add("out");$$("#pdots i").forEach((d,k)=>d.classList.toggle("on",k==i));
+setTimeout(()=>{$("#ptag").textContent=s.tag;$("#ptit").textContent=s.t;$("#pdesc").textContent=s.d;$("#pj").innerHTML=(s.act=="dc"?IC.dc:"")+s.cta;$("#pic").innerHTML=IC[s.ic];t.classList.remove("out")},i==0&&!$("#ptag").textContent?0:220)}
+function showPromo(){$("#promo").classList.add("on");pslide(0);let c=3;const b=$("#pcl");b.disabled=true;b.innerHTML=`<span id="pcd">${c}</span>`;clearInterval(pc);
+pc=setInterval(()=>{c--;if(c>0)$("#pcd").textContent=c;else{clearInterval(pc);b.disabled=false;b.textContent="✕"}},1000);clearInterval(pt);pt=setInterval(()=>pslide((pi+1)%PS.length),4500)}
+function hidePromo(){$("#promo").classList.remove("on");clearInterval(pt);clearInterval(pc)}
+$("#pcl").onclick=hidePromo;$("#plater").onclick=hidePromo;
+$("#pj").onclick=()=>{PS[pi].act=="dc"?joinDC():toast(PS[pi].cta+" - coming soon",1);hidePromo()};
+$("#promo").addEventListener("click",e=>{if(e.target.id=="promo"&&!$("#pcl").disabled)hidePromo()});
+addEventListener("keydown",e=>{if(e.key=="Escape"&&!$("#pcl").disabled)hidePromo()});
 </script></body></html>
